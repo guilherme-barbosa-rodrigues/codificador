@@ -76,7 +76,6 @@ html {
     border-radius: 32px;
 }
 .resultado__conteudo {
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     text-align: center;
     display: flex;
     flex-direction: column;
