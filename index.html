@@ -4,9 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Codificador de Texto | </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Codificador de Texto</title>
 </head>
 <body>
-    
+    <header class="cabecalho">
+        <img src="img/Logo Alura.png" alt="" class="cabecalho__logo">
+    </header>
+    <section class="principal">
+        <div class="principal__entrada">
+            <textarea class="principal__digite" name="" id="" cols="30" rows="10">Digite seu texto
+            </textarea>
+        </div>
+        <div class="requisitos">
+            <p class="requisitos__texto">Apenas letras minúsculas e sem acento.</p>
+        </div>
+
+        <div class="container__botoes">
+            <div class="botoes">
+                <button class="botao cripto">Criptografar</button>
+            </div>
+            <div class="botoes">
+                <button class="botao descripto">Descriptografar</button>
+            </div>
+        </div>
+
+        <div class="container__resultado">
+            <div class="resultado__conteudo">
+                <h3 class="resultado__conteudo--titulo">
+                    Nenhuma mensagem encontrada
+                </h3>
+                <p class="resultado__conteudo--texto">
+                    Digite um texto que você deseja criptografar ou descriptografar.
+                </p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
