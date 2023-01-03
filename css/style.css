@@ -69,6 +69,7 @@ html {
 .descripto {
     border: 1px solid #0A3871;
     color:#0A3871;
+    background-color: white;
 }
 .container__resultado {
     padding: 32px;
