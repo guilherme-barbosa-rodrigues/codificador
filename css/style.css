@@ -90,3 +90,6 @@ html {
 .resultado__conteudo--texto {
     color: #495057 ;
 }
+@media screen and (min-width: 1093px) {
+    
+}
