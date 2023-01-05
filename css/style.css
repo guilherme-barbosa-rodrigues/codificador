@@ -94,6 +94,31 @@ html {
 .pc {
     display: none;
 }
+.rodape, .rodape__linha {
+    width: 80vw;
+}
+.rodape {
+    display: flex;
+    align-items: center;
+  /* justify-content: space-around; */
+    padding: 0.1em;
+}
+.rodape__titulo {
+    margin-left: 1em;
+}
+.titulo {
+    text-decoration: none;
+    color: #0A3871;
+}
+.imagem__link-icon-link {
+    max-width: 24px;
+    max-height: 24px;
+    margin: 0 1.5em 
+}
+.imagem__link-icon-git {
+    max-width: 36px;
+    max-height: 36px;
+}
 @media screen and (min-width: 1024px) {
     html, body {
         width: 98vw;
@@ -141,27 +166,5 @@ html {
     .resultado__conteudo--titulo{
         margin: 1em 0 1em 0;
         padding: 0 1em;
-    }
-    .rodape {
-        display: flex;
-        align-items: center;
-      /* justify-content: space-around; */
-        padding: 0.1em;
-    }
-    .rodape__titulo {
-        margin-left: 1em;
-    }
-    .titulo {
-        text-decoration: none;
-        color: #0A3871;
-    }
-    .imagem__link-icon-link {
-        max-width: 24px;
-        max-height: 24px;
-        margin: 0 1.5em 
-    }
-    .imagem__link-icon-git {
-        max-width: 36px;
-        max-height: 36px;
     }
 }
