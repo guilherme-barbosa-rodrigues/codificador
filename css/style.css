@@ -8,6 +8,7 @@ html {
     font-family: "Inter";
     height: 100vh;
     width: 100vw;
+    overflow-x: hidden;
 }
 .cabecalho {
     display: flex;
@@ -69,10 +70,27 @@ html {
     background-color: #0A3871;
     box-shadow: none;
 }
+.cripto:hover {
+    background-color: #0d4fa0;
+    cursor: pointer;
+}
+.cripto:active {
+    background-color: #061f3d
+}
 .descripto {
     border: 1px solid #0A3871;
     color:#0A3871;
     background-color: white;
+}
+.descripto:hover {
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    background-color: #0A3871;
+}
+.descripto:active {
+    background-color: #061f3d;
+
 }
 .container__resultado {
     padding: 32px;
@@ -109,6 +127,13 @@ html {
 .titulo {
     text-decoration: none;
     color: #0A3871;
+}
+.titulo:hover {
+    color: #0d4fa0;
+}
+.imagem__link-icon-link:hover {
+    max-width: 18px;
+    max-height: 18px;
 }
 .imagem__link-icon-link {
     max-width: 24px;
