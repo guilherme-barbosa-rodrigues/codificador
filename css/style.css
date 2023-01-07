@@ -144,6 +144,29 @@ html {
     max-width: 36px;
     max-height: 36px;
 }
+.btn_copiar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+.copiar {
+    border: 1px solid #0A3871;
+    color:#0A3871;
+    background-color: white;
+}
+.copiar:hover {
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    background-color: #0A3871;
+}
+.copiar:active {
+    background-color: #061f3d;
+}
+.btn_copiar {
+    display: none;
+}
 @media screen and (min-width: 1024px) {
     html, body {
         width: 98vw;
@@ -191,5 +214,9 @@ html {
     .resultado__conteudo--titulo{
         margin: 1em 0 1em 0;
         padding: 0 1em;
+    }
+    .btn_copiar {
+        align-items:initial;
+        justify-content: right;
     }
 }
