@@ -36,6 +36,12 @@ html {
     text-indent: 10px;
     height: 320px;
 }
+#texto-resultado {
+    color: #0A3871;
+    font-size: 28px;
+    border: none;
+    font-family: "Inter";
+}
 .requisitos {
     width: 90vw;
 }
@@ -154,11 +160,17 @@ html {
     padding: 0;
 }
 .copiar {
+    padding: 15px;
+    border-radius: 24px;
+    border: 1px solid;
     border: 1px solid #0A3871;
     color:#0A3871;
     background-color: white;
+    font-family: 'Inter' sans-serif;
+    width: 50%;
 }
 .copiar:hover {
+    
     color: white;
     border: 1px solid white;
     cursor: pointer;
@@ -173,6 +185,18 @@ html {
 .pc__imagem {
     display: none;
 }
+.resultado-celular {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    display: none;
+}
+.pesquisando {
+    display: block;
+}
 @media screen and (min-width: 1024px) {
     html, body {
         width: 98vw;
@@ -180,7 +204,7 @@ html {
     }
     .principal__entrada {
         display: grid;
-        grid-template-rows: 400px 400px ;
+        grid-template-rows: 450px 225px ;
         grid-template-columns: 400px 400px ;
         
         width: max-content;
@@ -244,10 +268,17 @@ html {
         grid-row: 1 / 3;
         grid-column: 3;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: flex-start;
         height: 80%;
     }
     .container__requitios--botoes {
         width: 40%;
+    }
+    .resultado-celular {
+        gap: 40px;
+    }
+    #texto-resultado {
+        height: 160%;
+        margin-bottom: 1.5em;
     }
 }

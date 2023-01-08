@@ -16,7 +16,7 @@
     <section class="principal">
         
         <div class="principal__entrada">
-            <textarea class="principal__digite" name="" id="" cols="30" rows="10">Digite seu texto</textarea>
+            <textarea class="principal__digite" name="" id="texto-principal" cols="30" rows="10">Digite seu texto</textarea>
         
         <div class="container__requitios--botoes">
             <div class="requisitos">
@@ -24,25 +24,27 @@
             </div>
             <div class="container__botoes">
                 <div class="botoes">
-                    <button class="botao cripto">Criptografar</button>
+                    <button onclick="cripto()" id="criptar" class="botao cripto">Criptografar</button>
                 </div>
                 <div class="botoes">
-                    <button class="botao descripto">Descriptografar</button>
+                    <button onclick="descripto()" class="botao descripto">Descriptografar</button>
                 </div>
             </div>
         </div>
 
         <div class="container__resultado celular">
-                <img class="pc__imagem" src="img/High quality products 1 1.svg" alt="pesquisando">
-                <h3 class="resultado__conteudo--titulo">
-                    Nenhuma mensagem encontrada
-                </h3>
-                <p class="resultado__conteudo--texto">
-                    Digite um texto que você deseja criptografar ou descriptografar.
-                </p>
+                <div id="pesquisando" class="pesquisando">
+                    <img class="pc__imagem" src="img/High quality products 1 1.svg" alt="pesquisando">
+                    <h3 class="resultado__conteudo--titulo">
+                        Nenhuma mensagem encontrada
+                    </h3>
+                    <p class="resultado__conteudo--texto">
+                        Digite um texto que você deseja criptografar ou descriptografar.
+                    </p>
+                </div>
                 <section id="resultado" class="resultado__texto resultado-celular">
-                    <textarea type="text" id="texto-resultado" cols="40" rows="10"></textarea> 
-                    <button id="copiar" onclick="copiar()">Copiar</button>    
+                    <textarea type="text" id="texto-resultado" cols="25" rows="10"></textarea> 
+                    <button class="copiar" id="copiar" onclick="copiar()">Copiar</button>    
                 </section>
         </div>
     </section>
