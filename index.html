@@ -19,13 +19,17 @@
             <textarea class="principal__digite" name="" id="" cols="30" rows="10">Digite seu texto</textarea>
         
         <div class="container__resultado pc">
-            <img class="pc__imagem" src="img/High quality products 1 1.svg" alt="">
+            <img class="pc__imagem" src="img/High quality products 1 1.svg" alt="pesquisando">
             <h3 class="resultado__conteudo--titulo">
                 Nenhuma mensagem encontrada
             </h3>
             <p class="resultado__conteudo--texto">
                 Digite um texto que você deseja criptografar ou descriptografar.
             </p>
+            <section id="resultado" class="resultado__texto resultado-pc">
+                <textarea type="text" id="texto-resultado" cols="40" rows="10"></textarea> 
+                <button id="copiar" onclick="copiar()">Copiar</button>    
+            </section>
          </div>
         </div>
 
@@ -49,9 +53,10 @@
                 <p class="resultado__conteudo--texto">
                     Digite um texto que você deseja criptografar ou descriptografar.
                 </p>
-        </div>
-        <div class="botoes btn_copiar">
-            <button class="botao copiar">Copiar</button>
+                <section id="resultado" class="resultado__texto resultado-celular">
+                    <textarea type="text" id="texto-resultado" cols="40" rows="10"></textarea> 
+                    <button id="copiar" onclick="copiar()">Copiar</button>    
+                </section>
         </div>
     </section>
     <hr class="rodape_linha">

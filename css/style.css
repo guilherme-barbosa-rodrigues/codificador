@@ -219,4 +219,10 @@ html {
         align-items:initial;
         justify-content: right;
     }
+    .resultado-pc {
+        display: block
+    }
+    .resultado-celular {
+        display: none;
+    }
 }
