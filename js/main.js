@@ -1,41 +1,106 @@
+//  Div's resultado e pesquisando. 
+
 const pesquisando = document.getElementById("pesquisando");
 const resultado =  document.getElementById("resultado");
 
-function cripto() {
-    var output = document.querySelector('#texto-resultado');
+//  Botões
+
+const criptografar = document.getElementById('criptar');
+const descriptografar = document.getElementById('descripto');
+const copiar = document.getElementById('copiar');
+
+//  Entrada de texto "textarea"
+
+const entradaDeTexto = document.getElementById('texto-principal')
+
+//  Evento click com funções anonimas
+
+criptografar.addEventListener('click', function() {
+
+    const saida = document.querySelector('#texto-resultado');
+
+//  Trocando as div's
+    pesquisando.style.display = "none";
+
+    resultado.style.display = "flex";
+
+//  Pega o texto do input
+    var mensagem = entradaDeTexto.value;
+
+    var mensagemValor = "";
+
+    var listaDeCaracteres = mensagem.split("");
+
+//  Varre todos os caracteres e faz a troca.
+
+    for(var x = 0; x < listaDeCaracteres.length; x++) {
+        if(listaDeCaracteres[x] == "a") {
+            listaDeCaracteres[x] = "ai";
+        }
+
+        else if(listaDeCaracteres[x] == "e") {
+            listaDeCaracteres[x] = "enter";
+        }
+
+        else if(listaDeCaracteres[x] == "i") {
+            listaDeCaracteres[x] = "imes";
+        }
+
+        else if(listaDeCaracteres[x] == "o") {
+            listaDeCaracteres[x] = "ober";
+        }
+        
+        else if(listaDeCaracteres[x] == "u") {
+            listaDeCaracteres[x] = "ufat";
+        }
+
+        mensagemValor = mensagemValor + listaDeCaracteres[x];
+    }
+//  Retorna mensagem atualizada para o textarea
+
+saida.value = mensagemValor;
+console.log(mensagemValor)
+})
+
+descriptografar.addEventListener('click', function() {
+
+    const saida = document.querySelector('#texto-resultado');
 
     pesquisando.style.display = "none";
     resultado.style.display = "flex";
-    
-    var input = document.querySelector('#texto-principal');
-    var mensagem = input.value;
-    var novaMensagem = "";
 
-    var listaCaractere = mensagem.split("");
+    var mensagem = entradaDeTexto.value;
 
-    for(var i = 0; i < listaCaractere.length; i++) {
-        if(listaCaractere[i] == "a") {
-            listaCaractere[i] = "ai";
-        }
+    mensagem = mensagem.replaceAll("ai", "a");
+    mensagem = mensagem.replaceAll("enter", "e");
+    mensagem = mensagem.replaceAll("imes", "i");
+    mensagem = mensagem.replaceAll("ober", "o");
+    mensagem = mensagem.replaceAll("ufat", "u");
 
-        else if(listaCaractere[i] == "e") {
-            listaCaractere[i] = "enter";
-        }
+    saida.value = mensagem;
+})
+//  Botão copiar com função anonima
 
-        else if(listaCaractere[i] == "i") {
-            listaCaractere[i] = "imes";
-        }
+copiar.addEventListener('click', function(){
+    const saida = document.querySelector('#texto-resultado');
+    navigator.clipboard.writeText(saida.value);
+    alert("Texto copiado para area de transferencia")
 
-        else if(listaCaractere[i] == "o") {
-            listaCaractere[i] = "ober";
-        }
-        
-        else if(listaCaractere[i] == "u") {
-            listaCaractere[i] = "ufat";
-        }
+})
+//  Validação de caracteres
 
-        novaMensagem = novaMensagem + listaCaractere[i];
+entradaDeTexto.addEventListener('keypress', function(evento){
+    if(!checkChar(evento)) {
+        evento.preventDefault();
+        alert('Apenas letras minúsculas e sem acentos. Tente novamente!');
     }
-output.value = novaMensagem;
-console.log(novaMensagem)
+});
+
+function checkChar(evento) {
+    const caractere = String.fromCharCode(evento.keyCode);
+    const padrao = '[a-x0-9" "]';
+
+    if(caractere.match(padrao)){
+        return true;
+    }
 }

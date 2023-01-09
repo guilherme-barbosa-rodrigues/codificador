@@ -212,7 +212,7 @@ html {
 .pesquisando {
     display: block;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1064px) {
     html, body {
         width: 98vw;
         /*overflow: hidden; */
