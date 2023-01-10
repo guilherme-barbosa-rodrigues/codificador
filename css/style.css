@@ -5,13 +5,13 @@
     padding: 0;
 }
 :root {
-    --label-icon: url(../img/moon\ \(1\).png);
+    --label-icon: url(../img/lua-crescente.png);
     --cor-de-fundo: white;
     --cor-da-fonte: #0A3871;
     --cor-da-fonte-requisitos: #343A40;
     --cor-da-fonte-subtitulo: #495057;
     --cor-do-rodape: black;
-    --logo-icon : url(../img/Logo\ Alura.png)
+    --logo-icon : url(../img/Logo\ Alura.png);
 }
 html {
     font-family: "Inter";
@@ -21,10 +21,11 @@ html {
 }
 body {
     background-color: var(--cor-de-fundo);
+    transition: 0.5s;
 }
 .dark-mode {
     --logo-icon: url(../img/logo-alura-branco.png);
-    --label-icon: url(../img/sun.png);
+    --label-icon: url(../img/sol.png);
     --cor-de-fundo: #1D232A;
     --cor-da-fonte: #ffffff;
     --cor-da-fonte-requisitos: #a5a5a5;
@@ -76,6 +77,7 @@ body {
     height: 320px;
     outline: 0;
     background-color: var(--cor-de-fundo);
+    transition: 0.5s;
 }
 .principal__digite:focus::-webkit-input-placeholder {
     color: transparent;
@@ -139,6 +141,7 @@ body {
     border: 1px solid #0A3871;
     color: var(--cor-da-fonte);
     background-color: var(--cor-de-fundo);
+    transition: 0.5s;
 }
 .descripto:hover {
     color: white;
@@ -215,10 +218,11 @@ body {
     border-radius: 24px;
     border: 1px solid;
     border: 1px solid #0A3871;
-    color:#0A3871;
-    background-color: white;
+    color: var(--cor-da-fonte);
+    background-color: var(--cor-de-fundo);
     font-family: 'Inter' sans-serif;
     width: 50%;
+    transition: 0.5s;
 }
 .copiar:hover {
     
@@ -249,6 +253,7 @@ body {
     outline: 0;
     width: 80%;
     background-color: var(--cor-de-fundo);
+    transition: 0.5s;
 }
 #texto-resultado:focus::-webkit-input-placeholder {
     color: transparent;
